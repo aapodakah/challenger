@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'org.sonarqube'
 
 android {
     compileSdkVersion 29
@@ -17,7 +18,25 @@ android {
         versionName "0.0.6"
     }
 }
-
+/*
+sonarqube {
+    properties {
+        property 'sonar.projectName', 'com.cl.id.srcei.lock-reprint-app-android'
+        property 'sonar.projectKey', 'com.cl.id.srcei.lock-reprint-app-android:cl.id.srcei.lock-reprint-app'
+        property 'sonar.host.url', 'https://sbi1.mphr11.morpho.com'
+        property 'sonar.language', 'kotlin'
+        property 'sonar.sources', 'src/main'
+        property 'sonar.tests', 'src/test'
+        //property 'sonar.jacoco.reportPaths', 'build/reports/jacoco/test/jacocoTestReport.xml'
+        property 'sonar.sourceEncoding', 'UTF-8'
+        property "sonar.report.export.path", "sonar-report.json"
+        property "sonar.issuesReport.json.enable", "true"
+        //property 'sonar.login', '188537a8-98be-4251-b505-3608cb705da0'
+        //property 'sonar.password', ''
+        //property 'sonar.coverage.exclusions', 'src/androidTest/java'
+        }
+    }
+*/
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.browser:browser:1.2.0'
